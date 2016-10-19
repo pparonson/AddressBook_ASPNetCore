@@ -158,6 +158,7 @@
 -r:"/Users/pparonson/.nuget/packages/System.Threading.Timer/4.0.1/ref/netstandard1.2/System.Threading.Timer.dll"
 -r:"/Users/pparonson/.nuget/packages/System.Xml.ReaderWriter/4.0.11/ref/netstandard1.3/System.Xml.ReaderWriter.dll"
 -r:"/Users/pparonson/.nuget/packages/System.Xml.XDocument/4.0.11/ref/netstandard1.3/System.Xml.XDocument.dll"
+-resource:"/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/obj/Debug/netcoreapp1.0/AddressBook_ASPNetCoredotnet-compile.deps.json",AddressBook_ASPNetCore.deps.json
 "/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Program.cs"
 "/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Startup.cs"
 "/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Controllers/HomeController.cs"

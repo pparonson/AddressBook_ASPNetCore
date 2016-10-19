@@ -6,21 +6,16 @@ namespace AddressBook.Controllers
     {
         
         // Action methods to receive HTTP requests
-        public object Index() 
+        public IActionResult Index(string firstName, string lastName) 
         {
-            // create a new obj
-            var contact = new {
-                id = 1,
-                firstName = "Elle",
-                lastName = "Aronson",
-                email = "elle.aronson@gmail.com"
-            };
-            return contact;
+            ViewData["firstName"] = firstName;
+            ViewData["lastName"] = lastName;
+            return View();
         }
 
-        public string About()
+        public IActionResult About()
         {
-            return "This is an 'about' message";
+            return View();
         }
     }
 }
