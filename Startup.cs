@@ -11,32 +11,20 @@ namespace AddressBook
             // add configuration services for MVC
             services.AddMvc();
         }
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env) 
+        public void Configure(IApplicationBuilder app) 
         {
-
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else 
-            {
-                app.UseExceptionHandler("Home/Error");
-            }
-
             // app.UseDefaultFiles();
             app.UseStaticFiles();
             // app.UseFileServer(); 
 
-            // Add functionality for MVC
-
             // default route
-            app.UseMvcWithDefaultRoute();
+            // app.UseMvcWithDefaultRoute();
 
             // specified route with lamda anonymous fn
             app.UseMvc( routes => {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=HOME}/{action=Inde}/{id?}"
+                    template: "{controller=HOME}/{action=Index}/{id?}"
 
                 );
             });
