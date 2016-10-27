@@ -6,10 +6,8 @@ namespace AddressBook.Controllers
     {
         
         // Action methods to receive HTTP requests
-        public IActionResult Index(string firstName, string lastName) 
+        public IActionResult Index() 
         {
-            ViewData["firstName"] = firstName;
-            ViewData["lastName"] = lastName;
             return View();
         }
 

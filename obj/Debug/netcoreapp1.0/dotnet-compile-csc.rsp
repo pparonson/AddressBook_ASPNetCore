@@ -161,4 +161,8 @@
 -resource:"/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/obj/Debug/netcoreapp1.0/AddressBook_ASPNetCoredotnet-compile.deps.json",AddressBook_ASPNetCore.deps.json
 "/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Program.cs"
 "/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Startup.cs"
+"/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Controllers/ContactController.cs"
 "/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Controllers/HomeController.cs"
+"/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Models/Contact.cs"
+"/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Services/IContactRepository.cs"
+"/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Services/InMemoryContactRepository.cs"
