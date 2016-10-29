@@ -1,5 +1,5 @@
-using System;
 using System.Collections.Generic;
+using System.Linq;
 using AddressBook.Models;
 
 namespace AddressBook.Services
@@ -29,9 +29,20 @@ namespace AddressBook.Services
                 EmailAddress = "preston.aronson@gmail.com"
                 }
         };
+
         public IEnumerable<Contact> GetAllContacts()
         {
             return _contacts;
+        }
+
+        public void addContact(Contact contact)
+        {
+            /*
+             * Create primary key for in-memory contact
+             * Get Max key value from list and increment
+             */
+             contact.Id = _contacts.Max(c => c.Id) + 1;
+             _contacts.Add(contact);
         }
     }
 

@@ -6,5 +6,6 @@ namespace AddressBook.Services
     public interface IContactRepository
     {
         IEnumerable<Contact> GetAllContacts();
+        void addContact(Contact contact);
     }
 }

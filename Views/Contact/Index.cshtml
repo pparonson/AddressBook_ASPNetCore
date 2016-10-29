@@ -5,6 +5,8 @@
 @foreach(var contact in Model)
 {
     <ul>
-        <li>@contact.FirstName</li>
+        <li>
+            @contact.FirstName @contact.LastName 
+        </li>
     </ul>
 }
