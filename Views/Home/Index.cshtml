@@ -1,6 +1,15 @@
 @{
     ViewData["Title"] = "AddressBook_Index";
 }
-    <h1>Address Book Application</h1>
-    <div>@ViewData["Name"]</div>
+    <h1>Welcome to the Address Book Application</h1>
+    <!--<div>@ViewData["FirstName"]</div>-->
+    <div class="row">
+        <div class="col-md-12">
+            <a asp-controller="Contact" 
+            asp-action="Index" 
+            class="btn btn-primary">
+                Show Contacts   
+            </a>
+        </div>
+    </div>
 
