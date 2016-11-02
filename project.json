@@ -12,13 +12,13 @@
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
     "Microsoft.EntityFrameworkCore.Sqlite": "1.0.0",
     "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-*",
+      "version": "1.0.0-preview2-final",
       "type": "build"
     }
   },
   "tools": {
     "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-*",
+      "version": "1.0.0-preview2-final",
       "imports": [
         "dnxcore50",
         "portable-net45+win8+wp8"

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using AddressBook.Services;
+using System;
 
 namespace AddressBook 
 {
@@ -19,9 +20,11 @@ namespace AddressBook
         {
             if (env.IsDevelopment()) 
             {
+                Console.WriteLine(true);
                 app.UseDeveloperExceptionPage();
             } else 
             {
+                Console.WriteLine(false);
                 app.UseExceptionHandler("/Home/Error");
             }
 
