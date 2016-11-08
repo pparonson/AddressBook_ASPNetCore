@@ -2,29 +2,56 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using AddressBook.Services;
-using System;
+using Microsoft.Extensions.Configuration;
+using AddressBook.Data;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace AddressBook 
 {
     public class Startup 
     {
+        public IConfigurationRoot Configuration {get;}
+        public Startup(IHostingEnvironment env)
+        {
+            // create an external configuration files to load at startup
+            var builder = new ConfigurationBuilder()
+                // specify path to find file
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", 
+                    optional: true, 
+                    reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", 
+                    optional: true);
+            
+            builder.AddEnvironmentVariables();
+            Configuration = builder.Build();
+        }
         public void ConfigureServices(IServiceCollection services) 
         {
+            services.AddDbContext<ApplicationDbContext>(
+                options => options.UseSqlite(
+                    Configuration.GetConnectionString("DefaultConnection"))
+            );
+                
             // add configuration services for MVC
             services.AddMvc();
-            services.AddSingleton<IContactRepository, 
-                InMemoryContactRepository>();
+            // services.AddSingleton<IContactRepository, 
+            //     InMemoryContactRepository>();
+            services.AddScoped<IContactRepository, DatabaseContactRepository>();
         }
         public void Configure(IApplicationBuilder app,
             IHostingEnvironment env) 
         {
+            /*
+             * Instead of hard-coding connection pool; use configuration files 
+             * that specify environment (Development, Staging, Production, etc.)
+             */
             if (env.IsDevelopment()) 
             {
-                Console.WriteLine(true);
                 app.UseDeveloperExceptionPage();
             } else 
             {
-                Console.WriteLine(false);
                 app.UseExceptionHandler("/Home/Error");
             }
 

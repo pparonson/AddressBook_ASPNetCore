@@ -71,6 +71,8 @@
 --reference:/Users/pparonson/.nuget/packages/Microsoft.Extensions.Configuration/1.0.0/lib/netstandard1.1/Microsoft.Extensions.Configuration.dll
 --reference:/Users/pparonson/.nuget/packages/Microsoft.Extensions.Configuration.Abstractions/1.0.0/lib/netstandard1.0/Microsoft.Extensions.Configuration.Abstractions.dll
 --reference:/Users/pparonson/.nuget/packages/Microsoft.Extensions.Configuration.EnvironmentVariables/1.0.0/lib/netstandard1.3/Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+--reference:/Users/pparonson/.nuget/packages/Microsoft.Extensions.Configuration.FileExtensions/1.0.0/lib/netstandard1.3/Microsoft.Extensions.Configuration.FileExtensions.dll
+--reference:/Users/pparonson/.nuget/packages/Microsoft.Extensions.Configuration.Json/1.0.0/lib/netstandard1.3/Microsoft.Extensions.Configuration.Json.dll
 --reference:/Users/pparonson/.nuget/packages/Microsoft.Extensions.DependencyInjection/1.0.0/lib/netstandard1.1/Microsoft.Extensions.DependencyInjection.dll
 --reference:/Users/pparonson/.nuget/packages/Microsoft.Extensions.DependencyInjection.Abstractions/1.0.0/lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
 --reference:/Users/pparonson/.nuget/packages/Microsoft.Extensions.DependencyModel/1.0.0/lib/netstandard1.6/Microsoft.Extensions.DependencyModel.dll
@@ -196,6 +198,11 @@
 /Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Startup.cs
 /Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Controllers/ContactController.cs
 /Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Controllers/HomeController.cs
+/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Data/ApplicationDbContext.cs
+/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Data/Migrations/20161104160727_Initial.cs
+/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Data/Migrations/20161104160727_Initial.Designer.cs
+/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Data/Migrations/ApplicationDbContextModelSnapshot.cs
 /Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Models/Contact.cs
+/Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Services/DatabaseContactRepository.cs
 /Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Services/IContactRepository.cs
 /Users/pparonson/Documents/Developer/AddressBook_ASPNetCore/Services/InMemoryContactRepository.cs
